@@ -3,33 +3,28 @@ name: CI Build
 on: [push]
 
 jobs:
-  item-1:
+  library:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
       with:
         repository: hbfernandes/pentaho-jenkins-shared-library
         ref: master
-      
-  item-12:
-    runs-on: ubuntu-latest
-    needs: [item-1]
-    steps:
     - run: mvn -B clean verify
-      working-directory: ../pentaho-jenkins-shared-library
+      working-directory: ../pentaho-jenkins-shared-library  
 
-  item-2:
+  apache-browser:
     runs-on: ubuntu-latest
-    needs: [item-1]
+    needs: [library]
     steps:
     - uses: actions/checkout@v1
       with:
-        repository: hbfernandes/pentaho-jenkins-shared-library
+        repository: hbfernandes/apache-vfs-browser
         ref: master
     - uses: actions/setup-java@v1
       with:
         java-version: 1.8
     - name: Maven Build
-      working-directory: pentaho-jenkins-shared-library
+      working-directory: ../apache-vfs-browser
       run: mvn -B clean verify
       
