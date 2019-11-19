@@ -6,11 +6,7 @@ jobs:
   item-1:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-      with:
-        repository: hbfernandes/apache-vfs-browser
-        ref: master
-    - run: ls $GITHUB_WORKSPACE/apache-vfs-browser/
+    - run: ls $GITHUB_WORKSPACE
     - run: pwd
       working-directory: ./apache-vfs-browser/
       
