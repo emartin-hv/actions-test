@@ -2,23 +2,29 @@ name: CI
 
 on: [push]
 
+inputs:
+  mvnCommand:
+    description: 'Maven Command'
+    required: true
+    default: '-version'
+
 jobs:
   ubuntu:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: mvn -version
+    - name: Maven command ($INPUT_MVNCOMMAND)
+      run: mvn $INPUT_MVNCOMMAND
   macos:
     runs-on: macos
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: mvn -version
+    - name: Maven command ($INPUT_MVNCOMMAND)
+      run: mvn $INPUT_MVNCOMMAND
   windows:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: mvn -version
+    - name: Maven command ($INPUT_MVNCOMMAND)
+      run: mvn $INPUT_MVNCOMMAND
 
