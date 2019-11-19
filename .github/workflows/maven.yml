@@ -10,12 +10,9 @@ jobs:
       with:
         repository: hbfernandes/apache-vfs-browser
         ref: master
-    - uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - run: ls /home/runner/work/actions-test/apache-vfs-browser/
-    - working-directory: ./apache-vfs-browser
-      run: pwd
+    - run: ls $GITHUB_WORKSPACE/apache-vfs-browser/
+    - run: pwd
+      working-directory: ./apache-vfs-browser/
       
 
   item-2:
