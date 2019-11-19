@@ -1,7 +1,8 @@
 name: CI
 
 on: [push]
-
+env:
+  INPUT_MVNCOMMAND: '-version'
 jobs:
   ubuntu:
     runs-on: ubuntu-latest
