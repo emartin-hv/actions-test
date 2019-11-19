@@ -1,0 +1,5 @@
+inputs:
+  mvnCommand:
+    description: 'Maven Command'
+    required: true
+    default: '-version'
