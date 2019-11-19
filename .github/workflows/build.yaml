@@ -8,18 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Maven command ($INPUT_MVNCOMMAND)
+    - name: Maven command
       run: mvn $INPUT_MVNCOMMAND
   macos:
     runs-on: macos
     steps:
     - uses: actions/checkout@v1
-    - name: Maven command ($INPUT_MVNCOMMAND)
+    - name: Maven command
       run: mvn $INPUT_MVNCOMMAND
   windows:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      run: mvn $INPUT_MVNCOMMAND
+      run: mvn %INPUT_MVNCOMMAND%
 
