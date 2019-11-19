@@ -6,9 +6,15 @@ jobs:
   item-1:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v1
+      with:
+        repository: hbfernandes/pentaho-jenkins-shared-library
+        ref: master
     - run: echo $GITHUB_WORKSPACE
-    - run: pwd
-      working-directory: ./apache-vfs-browser/
+    - run: |
+        pwd
+        ls
+      working-directory: ../pentaho-jenkins-shared-library
       
 
   item-2:
