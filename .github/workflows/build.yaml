@@ -16,7 +16,6 @@ jobs:
         architecture: 'x64'
     - name: Python version
       run: python --version  
-- run: python my_script.py
   macos:
     runs-on: macos
     steps:
