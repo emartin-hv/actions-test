@@ -14,7 +14,8 @@ jobs:
       with:
         python-version: '3.x'
         architecture: 'x64'
-    - run: python --version  
+    - name: Python version
+      run: python --version  
 - run: python my_script.py
   macos:
     runs-on: macos
