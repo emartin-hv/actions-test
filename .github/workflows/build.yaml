@@ -4,7 +4,7 @@ on: [push]
 env:
   INPUT_MVNCOMMAND: '-version'
 jobs:
-  centos7:
+  centos:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v1
