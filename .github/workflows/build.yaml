@@ -14,7 +14,7 @@ jobs:
     #  with:
     #    python-version: '3.x'
     - name: Python version
-      run: python --version  
+      run: python3 --version  
   macos:
     runs-on: macos
     steps:
