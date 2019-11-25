@@ -5,7 +5,7 @@ env:
   INPUT_MVNCOMMAND: '-version'
 jobs:
   centos7:
-    runs-on: self-hosted
+    runs-on: [self-hosted, linux]
     steps:
     - uses: actions/checkout@v1
     - name: Maven command
