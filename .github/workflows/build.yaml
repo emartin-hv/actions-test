@@ -1,6 +1,6 @@
 name: CI
 
-on: [push]
+on: [push, repository_dispatch]
 env:
   INPUT_MVNCOMMAND: '-version'
 jobs:
